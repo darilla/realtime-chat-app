@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Joint from './components/Joint/Joint';
+import Joint from './components/Join/Join';
 import Chat from './components/Chat/Chat';
 
 const App = () => (

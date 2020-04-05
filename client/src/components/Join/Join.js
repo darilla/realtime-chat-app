@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container,NameInput, RoomInput, Button, Wrapper, Heading } from './Joint.styles';
+import { Container,NameInput, RoomInput, Button, Wrapper, Heading } from './Join.styles';
 
 const Joint = () => {
   const [name, setName] = useState('');
