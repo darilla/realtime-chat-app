@@ -1,16 +1,20 @@
 import styled from 'styled-components';
 
 export const StyledForm = styled.form`
+  border-top: 2px solid #FFF;
   display: flex;
-  border-top: 2px solid #D3D3D3;
+  padding: 20px;
+  position: relative;
+  width: 100%;
 `;
 
 export const StyledInput = styled.input`
+  border-radius: 40px;
   border: none;
-  border-radius: 0;
-  padding: 5%;
-  width: 80%;
-  font-size: 1.2em;
+  color: #046E8F;
+  font-size: 1.1rem;
+  padding: 20px 60px 20px 20px;
+  width: 100%;
 
   :focus {
     outline-color: transparent;
@@ -18,13 +22,25 @@ export const StyledInput = styled.input`
 `;
 
 export const SendButton = styled.button`
-  color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #2979FF;
-  padding: 20px;
-  display: inline-block;
+  background: transparent;
   border: none;
-  width: 20%;
   cursor: pointer;
+  position: absolute;
+  right: 40px;
+  text-decoration: none;
+  top: 35px;
+
+  svg {
+    fill: #046E8F;
+    height: 30px;
+    width: 30px;
+  }
+
+  :focus {
+    outline-color: transparent;
+
+    svg {
+      fill: #57B8FF;
+    }
+  }
 `;

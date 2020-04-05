@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { ReactComponent as StatusIcon} from '../../icons/happy.svg';
+import { ReactComponent as HomeIcon} from '../../icons/home.svg';
 import { ReactComponent as CrossIcon} from '../../icons/cross.svg';
+import { ReactComponent as UsersIcon} from '../../icons/users.svg';
 
-import { Container, UsersOnline, LeftContainer, RightContainer } from './InfoBar.styles';
+import { Container, RoomContainer, Number, RightContainer } from './InfoBar.styles';
 
 const InfoBar = ({ room, usersNumber }) => (
   <Container>
-    <LeftContainer>
-      <StatusIcon widht="15" height="15"/>
-      <h3>{room}</h3>
-    </LeftContainer>
-    <UsersOnline>Users online: {usersNumber}</UsersOnline>
-    <RightContainer>
-      <a href="/"><CrossIcon widht="10" height="10"/></a>
-    </RightContainer>
+    <RoomContainer>
+      <HomeIcon />
+      <Number>{room}</Number>
+      <UsersIcon />
+      <Number>{usersNumber}</Number>
+    </RoomContainer>
+    <a href="/"><CrossIcon /></a>
   </Container>
 );
 

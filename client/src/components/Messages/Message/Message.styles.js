@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const UserName = styled.div`
-  display: flex;
   align-items: center;
-  font-family: Helvetica;
+  color: #FFF;
+  display: flex;
   letter-spacing: 0.3px;
-  color: #828282;
   margin-right: 10px;
 `;
 
@@ -15,19 +14,18 @@ export const Admin = styled(UserName)`
 `;
 
 export const MessageBox = styled.div`
-  background: #F3F3F3;
+  align-items: center;
   border-radius: 20px;
-  padding: 5px 20px;
-  color: white;
-  display: inline-block;
+  display: flex;
   max-width: 80%;
+  min-height: 45px;
+  padding: 10px 15px;
 `;
 
 export const MessageText = styled.p`
-  width: 100%;
-  letter-spacing: 0;
-  float: left;
   font-size: 1.1em;
+  margin: 0;
+  width: 100%;
   word-wrap: break-word;
 
   img {
@@ -37,12 +35,13 @@ export const MessageText = styled.p`
 
 export const Container = styled.div`
   display: flex;
+  font-family: 'PT Serif', serif;
   justify-content: ${({ isSentByCurrentUser }) => isSentByCurrentUser ? 'flex-end' : 'flex-start'};
-  padding: 0 5%;
-  margin-top: 3px;
+  margin-top: 20px;
+  padding: 0 20px;
 
   ${MessageBox} {
-    background: ${({ isSentByCurrentUser }) => isSentByCurrentUser ? '#F3F3F3' : '#2979FF'};
-    color: ${({ isSentByCurrentUser }) => isSentByCurrentUser ? '#828282' : 'black'};
+    background: ${({ isSentByCurrentUser }) => isSentByCurrentUser ? '#1DB4C9' : '#F4E0B5'};
+    color: ${({ isSentByCurrentUser }) => isSentByCurrentUser ? '#FFF' : '#183446'};
   }
 `;

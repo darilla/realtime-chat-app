@@ -2,6 +2,8 @@ import React from 'react';
 
 import { StyledForm, StyledInput, SendButton } from './input.styles';
 
+import { ReactComponent as SendIcon} from '../../icons/paper-plane.svg';
+
 const Input = ({ setMessage, sendMessage, message }) => {
   const handleChange = (e) => setMessage(e.target.value);
 
@@ -17,14 +19,14 @@ const Input = ({ setMessage, sendMessage, message }) => {
   return (
     <StyledForm>
       <StyledInput
-        type="text"
-        placeholder="Type a message..."
-        value={message}
         onChange={handleChange}
         onKeyPress={handleKeyPress}
+        placeholder="Type a message..."
+        type="text"
+        value={message}
       />
       <SendButton onClick={handleClick}>
-        Send
+        <SendIcon />
       </SendButton>
     </StyledForm>
   )
