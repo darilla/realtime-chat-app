@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container, NameInput, RoomInput, Button, Wrapper, Heading } from './Join.styles';
+import { Container, StyledInput, Button, Wrapper, Heading, StyledUserIcon } from './Join.styles';
 
 const Joint = () => {
   const [name, setName] = useState('');
@@ -20,12 +20,13 @@ const Joint = () => {
   return (
     <Wrapper>
       <Container>
-        <Heading>Join</Heading>
-        <div><NameInput placeholder='Name' type="text" onChange={handleSetName}/></div>
-        <div><RoomInput placeholder='Room' type="text" onChange={handleSetRoom}/></div>
+        <StyledUserIcon />
+        <Heading>Sign In</Heading>
+          <StyledInput placeholder='Name' type="text" onChange={handleSetName}/>
+          <StyledInput placeholder='Room' type="text" onChange={handleSetRoom}/>
         {/* You can pass parameters by using `?` mark */}
         <Link onClick={handleSignIn} to={`/chat?name=${name}&room=${room}`}>
-          <Button type="submit">Sign In</Button>
+          <Button type="submit">Login</Button>
         </Link>
       </Container>
     </Wrapper>
