@@ -23,6 +23,7 @@ const Chat = ({ location }) => {
     () => {
       const { name, room } = queryString.parse(location.search);
       
+      // Conntecting client websocket to the server.
       socket = io(ENDPOINT);
 
       setRoom(room);
@@ -63,6 +64,7 @@ const Chat = ({ location }) => {
     event.preventDefault();
 
     if(message) {
+      // Emitting a message down to the websocket to the server.
       socket.emit('sendMessage', message, () => setMessage(''));
     }
   }

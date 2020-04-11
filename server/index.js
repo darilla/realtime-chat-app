@@ -16,10 +16,12 @@ const router = require('./router');
 
 const app = express();
 const server = http.createServer(app);
+// On which server I want the socket to work.
 const io = socketio(server);
 
 // Runs when there is a connection with FE.
-// Specific client instance of the socket.
+// Specific client instance of the socket. That particluar socket that has been made.
+// E.g 10 different client that make connection will have different sockets.
 io.on('connection', (socket) => {
   console.log('We have a new connection !!');
 
